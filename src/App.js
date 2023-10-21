@@ -9,7 +9,7 @@ import CarouselImg from "./component/CarouselImg";
 function App() {
   return (
     <div className="">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename={'/alien-e-commerce'}>
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
