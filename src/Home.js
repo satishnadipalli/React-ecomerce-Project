@@ -1,23 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import imgfirst from "./assets/imgfirst.png";
 import imgsec from "./assets/imgsec.png";
 import imgthird from "./assets/imgthird.png";
 import Carousel from "./component/Carousel";
 import ProductCategory from "./component/ProductCategory";
-// import useWindowDimensions from "./customHook/useWindowDimensions";
+import CarouselImg from "./component/CarouselImg";
 const Home = () => {
-  // const windowDimensions = useWindowDimensions();
-  // console.log("width ", windowDimensions);
   const slides = [
     { img: imgfirst, title: "first" },
     { img: imgsec, title: "sec" },
     { img: imgthird, title: "third" },
   ];
+  const [SlidesComp, setProducts] = useState([]);
+  const [isloading, setIsLoading] = useState(true);
+  const id = "men's clothing"
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch(
+          `https://fakestoreapi.com/products/category/${id}`
+        );
+        const jsonData = await res.json();
+        // console.log("Res ", jsonData);
+        setIsLoading(false);
+        const slides = jsonData.map((x) => { return (<CarouselImg title={x.title} img={x.image} />) })
+        // setProducts(jsonData);/
+        setProducts(slides);
+
+      } catch (error) {
+        setIsLoading(false);
+        console.log("err ", error);
+      }
+
+    };
+    fetchProducts();
+  }, [id]);
 
   return (
     <div className="text-black relative">
-      <div className={`w-full h-[170px] md:h-[280px] p-1`}>
-        {slides.length > 0 && <Carousel slides={slides} parentWidth={500} />}
+      <div className={`w-full h-[170px] md:h-[280px] p-1 overflow-hidden`}>
+        {slides.length > 0 && <Carousel slides={slides} SlidesComp={SlidesComp} isloading={isloading}/>}
       </div>
       <div className="mt-3">
         <ProductCategory />

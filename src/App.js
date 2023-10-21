@@ -4,6 +4,7 @@ import Contact from "./Contact";
 import ErrorPage from "./ErrorPage";
 import Header from "./Header";
 import Home from "./Home";
+import CarouselImg from "./component/CarouselImg";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/category/:id" element={<ProductsList />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<ErrorPage />} />
+          <Route path="/corusel" element={<CarouselImg />}/> 
         </Routes>
       </BrowserRouter>
     </div>

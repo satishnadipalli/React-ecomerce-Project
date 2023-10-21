@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import CarouselImg from "./CarouselImg";
 
-const Carousel = ({ slides, parentWidth }) => {
+const Carousel = ({ slides,SlidesComp, isloading }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const timerRef = useRef(null);
 
@@ -41,34 +42,25 @@ const Carousel = ({ slides, parentWidth }) => {
   return (
     <div className="h-full relative text-black">
       <div
-        className="absolute top-1/2 left-[32px] -translate-y-1/2 text-[22px] md:text-[55px] text-black z-10 cursor-pointer"
+        className="z-20 absolute top-1/2 left-[32px] -translate-y-1/2 text-[22px] md:text-[55px] text-black cursor-pointer"
         onClick={goToPrevious}
       >
         &#10096;
       </div>
-      <div
-        className="w-full h-full rounded-[10px] bg-center bg-cover"
+      {/* <div
+        className="w-full h-full rounded-[10px] bg-no-repeat bg-contain bg-center"
         style={{ backgroundImage: `url(${slides[currentIndex].img})` }}
-      ></div>
-      {/* <div className="overflow-hidden h-full">
-        <div style={getSlideContainerStylesWithWidth()}>
-          {slides.map((x, i) => (
-            <div
-              className="w-full h-full rounded-[10px] bg-center bg-cover"
-              key={i}
-              style={getSlideStylesWithBackground(i)}
-            ></div>
-          ))}
-        </div>
-      </div> */}
-
+      ></div> */}
+      <div 
+        className="w-full h-full rounded-[10px] bg-no-repeat bg-contain bg-center"
+        >{isloading ?  <CarouselImg /> : SlidesComp[currentIndex]}</div>
       <div
         className="absolute top-1/2 right-[32px] -translate-y-1/2 text-[22px] md:text-[55px] text-black z-10 cursor-pointer"
         onClick={goToNext}
       >
         &#10097;
       </div>
-      <div className="flex justify-center text-[12px] md:text-[17px] leading-none  rounded-full px-2 py-0">
+      <div className="z-20 flex justify-center text-[12px] md:text-[17px] leading-none  rounded-full px-2 py-0">
         {slides.map((x, index) => (
           <div
             key={index}
