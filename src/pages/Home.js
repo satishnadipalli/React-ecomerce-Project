@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Carousel from "./component/Carousel";
-import ProductCategory from "./component/ProductCategory";
-import CarouselImg from "./component/CarouselImg";
+import Carousel from "../component/Carousel";
+import ProductCategory from "../component/ProductCategory";
+import CarouselImg from "../component/CarouselImg";
 const Home = () => {
   const slides = [{}]
   const [SlidesComp, setProducts] = useState([]);

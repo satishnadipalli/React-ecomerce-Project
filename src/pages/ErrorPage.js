@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { repoName } from "../constant/variables";
 
 const ErrorPage = () => {
   return (
@@ -10,7 +11,7 @@ const ErrorPage = () => {
       </h1>
       <Link
         className="py-1 px-2 bg-[#6666ff] rounded-md text-white text-base md:text-xl"
-        to="/"
+        to={repoName}
       >
         Go Home
       </Link>

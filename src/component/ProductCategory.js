@@ -4,6 +4,7 @@ import elec from "../assets/elec.jpg";
 import jewel from "../assets/jewel.jpg";
 import men from "../assets/men.jpg";
 import women from "../assets/women.jpg";
+import { repoName } from "../constant/variables";
 const ProductCategory = () => {
   const categories = [
     { title: "electronics", img: elec },
@@ -16,7 +17,7 @@ const ProductCategory = () => {
     <div className="flex justify-evenly flex-wrap text-[12px] md:text-[17px] leading-none rounded-full px-2 py-0 ">
       {categories.length &&
         categories.map((x, i) => (
-          <Link to={`/category/${x.title}`} className="m-5 " key={i}>
+          <Link to={`${repoName}/category/${x.title}`} className="m-5 " key={i}>
             <div className="m-[6px] w-[100px] h-[100px] md:w-[200px] md:h-[200px] mx-auto ">
               <img
                 className="w-[100px] h-[100px] md:w-[200px] md:h-[200px] "

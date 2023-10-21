@@ -1,22 +1,21 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProductsList from "./component/ProductsList";
-import Contact from "./Contact";
-import ErrorPage from "./ErrorPage";
-import Header from "./Header";
-import Home from "./Home";
-import CarouselImg from "./component/CarouselImg";
+import Contact from "./pages/Contact";
+import ErrorPage from "./pages/ErrorPage";
+import Header from "./component/Header";
+import Home from "./pages/Home";
+import { repoName } from "./constant/variables";
 
 function App() {
   return (
     <div className="">
-      <BrowserRouter basename={'/alien-e-commerce'}>
+      <BrowserRouter>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/category/:id" element={<ProductsList />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<ErrorPage />} />
-          <Route path="/corusel" element={<CarouselImg />}/> 
+          <Route exact path={repoName} element={<Home />} />
+          <Route path={`${repoName}/category/:id`} element={<ProductsList />} />
+          <Route path={`${repoName}/contact`} element={<Contact />} />
+          <Route path={`${repoName}/*`} element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
     </div>
