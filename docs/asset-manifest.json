@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://prafullnavkar.github.io/alien-e-commerce/static/css/main.7eb11809.css",
-    "main.js": "https://prafullnavkar.github.io/alien-e-commerce/static/js/main.070f6ce4.js",
+    "main.js": "https://prafullnavkar.github.io/alien-e-commerce/static/js/main.6efad1d9.js",
     "static/js/787.71f85c62.chunk.js": "https://prafullnavkar.github.io/alien-e-commerce/static/js/787.71f85c62.chunk.js",
     "static/media/alien.png": "https://prafullnavkar.github.io/alien-e-commerce/static/media/alien.c353d38f30901f0972a3.png",
     "static/media/men.jpg": "https://prafullnavkar.github.io/alien-e-commerce/static/media/men.474294d3c9f202fd43b9.jpg",
@@ -10,11 +10,11 @@
     "static/media/elec.jpg": "https://prafullnavkar.github.io/alien-e-commerce/static/media/elec.0f69d5e786b2f2eacf6d.jpg",
     "index.html": "https://prafullnavkar.github.io/alien-e-commerce/index.html",
     "main.7eb11809.css.map": "https://prafullnavkar.github.io/alien-e-commerce/static/css/main.7eb11809.css.map",
-    "main.070f6ce4.js.map": "https://prafullnavkar.github.io/alien-e-commerce/static/js/main.070f6ce4.js.map",
+    "main.6efad1d9.js.map": "https://prafullnavkar.github.io/alien-e-commerce/static/js/main.6efad1d9.js.map",
     "787.71f85c62.chunk.js.map": "https://prafullnavkar.github.io/alien-e-commerce/static/js/787.71f85c62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7eb11809.css",
-    "static/js/main.070f6ce4.js"
+    "static/js/main.6efad1d9.js"
   ]
 }
