@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.7eb11809.css",
-    "main.js": "/static/js/main.3523f3fc.js",
-    "static/js/787.71f85c62.chunk.js": "/static/js/787.71f85c62.chunk.js",
-    "static/media/alien.png": "/static/media/alien.c353d38f30901f0972a3.png",
-    "static/media/men.jpg": "/static/media/men.474294d3c9f202fd43b9.jpg",
-    "static/media/jewel.jpg": "/static/media/jewel.30800538fa81ccda8fdb.jpg",
-    "static/media/women.jpg": "/static/media/women.b64f1c03785586da79eb.jpg",
-    "static/media/elec.jpg": "/static/media/elec.0f69d5e786b2f2eacf6d.jpg",
-    "index.html": "/index.html",
-    "main.7eb11809.css.map": "/static/css/main.7eb11809.css.map",
-    "main.3523f3fc.js.map": "/static/js/main.3523f3fc.js.map",
-    "787.71f85c62.chunk.js.map": "/static/js/787.71f85c62.chunk.js.map"
+    "main.css": "/alien-e-commerce/static/css/main.7eb11809.css",
+    "main.js": "/alien-e-commerce/static/js/main.eb538a3f.js",
+    "static/js/787.71f85c62.chunk.js": "/alien-e-commerce/static/js/787.71f85c62.chunk.js",
+    "static/media/alien.png": "/alien-e-commerce/static/media/alien.c353d38f30901f0972a3.png",
+    "static/media/men.jpg": "/alien-e-commerce/static/media/men.474294d3c9f202fd43b9.jpg",
+    "static/media/jewel.jpg": "/alien-e-commerce/static/media/jewel.30800538fa81ccda8fdb.jpg",
+    "static/media/women.jpg": "/alien-e-commerce/static/media/women.b64f1c03785586da79eb.jpg",
+    "static/media/elec.jpg": "/alien-e-commerce/static/media/elec.0f69d5e786b2f2eacf6d.jpg",
+    "index.html": "/alien-e-commerce/index.html",
+    "main.7eb11809.css.map": "/alien-e-commerce/static/css/main.7eb11809.css.map",
+    "main.eb538a3f.js.map": "/alien-e-commerce/static/js/main.eb538a3f.js.map",
+    "787.71f85c62.chunk.js.map": "/alien-e-commerce/static/js/787.71f85c62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7eb11809.css",
-    "static/js/main.3523f3fc.js"
+    "static/js/main.eb538a3f.js"
   ]
 }
