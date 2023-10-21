@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from "react";
-import imgfirst from "./assets/imgfirst.png";
-import imgsec from "./assets/imgsec.png";
-import imgthird from "./assets/imgthird.png";
 import Carousel from "./component/Carousel";
 import ProductCategory from "./component/ProductCategory";
 import CarouselImg from "./component/CarouselImg";
 const Home = () => {
-  const slides = [
-    { img: imgfirst, title: "first" },
-    { img: imgsec, title: "sec" },
-    { img: imgthird, title: "third" },
-  ];
+  const slides = [{}]
   const [SlidesComp, setProducts] = useState([]);
   const [isloading, setIsLoading] = useState(true);
   const id = "men's clothing"
@@ -39,7 +32,7 @@ const Home = () => {
   return (
     <div className="text-black relative">
       <div className={`w-full h-[170px] md:h-[280px] p-1 overflow-hidden`}>
-        {slides.length > 0 && <Carousel slides={slides} SlidesComp={SlidesComp} isloading={isloading}/>}
+        {slides.length > 0 && <Carousel slides={slides} SlidesComp={SlidesComp} isloading={isloading} />}
       </div>
       <div className="mt-3">
         <ProductCategory />
