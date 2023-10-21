@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { repoName } from '../constant/variables'
 const CarouselImg = ({ title, img }) => {
     return (
         <div className='relative flex justify-evenly items-center px-4 text-center bg-white w-full h-[170px] md:h-[280px] rounded border-[1px] border-gray-300 overflow-hidden'>
@@ -13,7 +12,7 @@ const CarouselImg = ({ title, img }) => {
             <div className='w-[50%] z-10 break-all'>
                 <p className={`${title ? "font-semibold text-[12px] md:text-base" : "animate-pulse bg-gray-400 w-full h-[8px] md:h-[10px] rounded-md"}`}>{title}</p>
                 {title ?
-                    <Link to={`${repoName}/category/men's clothing`} className="text-black font-semibold underline rounded-md text-xs md:text-sm mt-2">Explore all &gt;</Link>
+                    <Link to={`/category/men's clothing`} className="text-black font-semibold underline rounded-md text-xs md:text-sm mt-2">Explore all &gt;</Link>
                     :
                     <p className="mt-2 mx-auto animate-pulse bg-gray-400 w-[80px] md:w-[200px] h-[8px] md:h-[10px] rounded-md"></p>
 

@@ -1,1 +1,0 @@
-export const repoName = process.env.REACT_APP_REPO_NAME ? `/${process.env.REACT_APP_REPO_NAME}` : "/"
