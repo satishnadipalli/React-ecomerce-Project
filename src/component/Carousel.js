@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import CarouselImg from "./CarouselImg";
 
-const Carousel = ({ slides,SlidesComp, isloading }) => {
+const Carousel = ({ slides, isloading }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const timerRef = useRef(null);
 
@@ -53,7 +53,7 @@ const Carousel = ({ slides,SlidesComp, isloading }) => {
       ></div> */}
       <div 
         className="w-full h-full rounded-[10px] bg-no-repeat bg-contain bg-center"
-        >{isloading ?  <CarouselImg /> : SlidesComp[currentIndex]}</div>
+        >{isloading ?  <CarouselImg /> : slides[currentIndex]}</div>
       <div
         className="absolute top-1/2 right-[32px] -translate-y-1/2 text-[22px] md:text-[55px] text-black z-10 cursor-pointer"
         onClick={goToNext}

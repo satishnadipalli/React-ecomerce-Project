@@ -3,8 +3,7 @@ import Carousel from "../component/Carousel";
 import ProductCategory from "../component/ProductCategory";
 import CarouselImg from "../component/CarouselImg";
 const Home = () => {
-  const slides = [{}]
-  const [SlidesComp, setProducts] = useState([]);
+  const [slides, setSlides] = useState([{}]);
   const [isloading, setIsLoading] = useState(true);
   const id = "men's clothing"
   useEffect(() => {
@@ -16,9 +15,9 @@ const Home = () => {
         const jsonData = await res.json();
         // console.log("Res ", jsonData);
         setIsLoading(false);
-        const slides = jsonData.map((x) => { return (<CarouselImg title={x.title} img={x.image} />) })
+        const productsSlides = jsonData.map((x) => { return (<CarouselImg title={x.title} img={x.image} />) })
         // setProducts(jsonData);/
-        setProducts(slides);
+        setSlides(productsSlides);
 
       } catch (error) {
         setIsLoading(false);
@@ -32,7 +31,7 @@ const Home = () => {
   return (
     <div className="text-black relative">
       <div className={`w-full h-[170px] md:h-[280px] p-1 overflow-hidden`}>
-        {slides.length > 0 && <Carousel slides={slides} SlidesComp={SlidesComp} isloading={isloading} />}
+        {slides.length > 0 && <Carousel slides={slides} isloading={isloading} />}
       </div>
       <div className="mt-3">
         <ProductCategory />
