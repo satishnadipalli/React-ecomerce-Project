@@ -10,9 +10,10 @@ const ProductsList = () => {
       try {
         const res = await fetch(
           `https://fakestoreapi.com/products/category/${id}`
+          
         );
         const jsonData = await res.json();
-        // console.log("Res ", jsonData);
+        console.log("Res ", jsonData);
         setIsLoading("success");
   
         setProducts(jsonData);
@@ -29,7 +30,7 @@ const ProductsList = () => {
     fetchProducts();
   }, [id]);
 
-
+  console.log(products);
   return (
     <div className="flex flex-col justify-center ">
       {isloading === "loader" ? (

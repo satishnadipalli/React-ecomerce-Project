@@ -4,7 +4,6 @@ import CarouselImg from "./CarouselImg";
 const Carousel = ({ slides, isloading }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const timerRef = useRef(null);
-
   const goToPrevious = () => {
     const isFirstSlides = currentIndex === 0;
     const newIndex = isFirstSlides ? slides.length - 1 : currentIndex - 1;
@@ -28,17 +27,6 @@ const Carousel = ({ slides, isloading }) => {
   const goToSlide = (i) => {
     setCurrentIndex(i);
   };
-  // const getSlideStylesWithBackground = (i) => ({
-  //   backgroundImage: `url(${slides[i].img})`,
-  //   width: `${parentWidth}`,
-  // });
-  // const getSlideContainerStylesWithWidth = () => ({
-  //   display: "flex",
-  //   height: "100%",
-  //   transition: "transform ease-out 0.3s",
-  //   width: parentWidth * slides.length,
-  //   transform: `translateX(${-(currentIndex * parentWidth)}px)`,
-  // });
   return (
     <div className="h-full relative text-black">
       <div
@@ -60,17 +48,7 @@ const Carousel = ({ slides, isloading }) => {
       >
         &#10097;
       </div>
-      <div className="z-20 flex justify-center text-[12px] md:text-[17px] leading-none  rounded-full px-2 py-0">
-        {slides.map((x, index) => (
-          <div
-            key={index}
-            className="m-[3px] cursor-pointer text-black"
-            onClick={() => goToSlide(index)}
-          >
-            &#x2022;
-          </div>
-        ))}
-      </div>
+      
     </div>
   );
 };

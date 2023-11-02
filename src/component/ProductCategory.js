@@ -24,7 +24,7 @@ const ProductCategory = () => {
                 alt={x.title}
               />
             </div>
-            <p className="mx-auto text-center ">{x.title}</p>
+            <p className="mx-auto text-center">{x.title}</p>
           </Link>
         ))}
     </div>

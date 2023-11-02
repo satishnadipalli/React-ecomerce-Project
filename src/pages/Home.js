@@ -13,7 +13,6 @@ const Home = () => {
           `https://fakestoreapi.com/products/category/${id}`
         );
         const jsonData = await res.json();
-        // console.log("Res ", jsonData);
         setIsLoading(false);
         const productsSlides = jsonData.map((x) => { return (<CarouselImg title={x.title} img={x.image} />) })
         // setProducts(jsonData);/
