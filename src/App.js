@@ -4,17 +4,17 @@ import Contact from "./pages/Contact";
 import ErrorPage from "./pages/ErrorPage";
 import Header from "./component/Header";
 import Home from "./pages/Home";
-import LoginPage from "./component/LoginPage";
+import LogMerging from "./component/LogMerging";
 import { useState } from "react";
 
 function App() {
-  const [login,setisLogin] = useState(true);
+  const [signUp,setSignup] = useState(false);
 
   return (
-    <div className="w-full flex justify-center  h-screen flex-col ">
-      {
-        login ? <LoginPage login={login} setisLogin={setisLogin} /> : 
-        <div>
+    <div className="w-full flex justify-center  h-screen flex-col -py-2">
+      { !signUp ? <LogMerging setSignup={setSignup}  />  :
+        
+        <div >
         <HashRouter>
         <Header />
         <Routes>
@@ -25,7 +25,7 @@ function App() {
         </Routes>
       </HashRouter>
         </div>
-        
+
       }
     </div>
   );
