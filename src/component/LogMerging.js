@@ -1,7 +1,7 @@
 import React from 'react'
 import LoginPage from './LoginPage';
 import SignUpPage from './SignInPage';
-import { useState } from 'react';
+import { useState,useRef } from 'react';
 
 const LogMerging = ({setSignup}) => {
 const [login,setisLogin] = useState(true);
@@ -9,7 +9,11 @@ const [login,setisLogin] = useState(true);
   return (
     <div>
         {
-            login ? <SignUpPage setisLogin={setisLogin} setSignup={setSignup} /> : <LoginPage setisLogin={setisLogin} login={login} setisLogin={setisLogin}/>
+            login ? <SignUpPage setisLogin={setisLogin} setSignup={setSignup} /> 
+            
+            : 
+            
+            <LoginPage setisLogin={setisLogin} login={login}/>
         }
         
     </div>
