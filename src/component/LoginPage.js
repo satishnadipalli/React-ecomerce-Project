@@ -20,7 +20,7 @@ const LoginPage = ({login,setisLogin}) => {
             }
         })
     }
-
+    console.log(UserData)
     function handleSubmit(event) {
         event.preventDefault();
         console.log(emailexist)

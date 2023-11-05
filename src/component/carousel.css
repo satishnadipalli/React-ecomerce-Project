@@ -1,0 +1,65 @@
+/* Carousel container */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  /* Left arrow */
+  .left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 20;
+  }
+  
+  /* Right arrow */
+  .right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  /* Carousel content */
+  .carousel-content {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Use a CSS transition for smooth sliding */
+  }
+  
+  /* Add animation and styles for sliding effect */
+  .carousel-content.active {
+    transform: translateX(-100%); /* Initial position for animation */
+    animation: slideIn 4s linear infinite;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+      /* Change the background styles here */
+    }
+    25% {
+      transform: translateX(0);
+      opacity: 1;
+      /* Change the background styles here */
+    }
+    75% {
+      transform: translateX(0);
+      opacity: 1;
+      /* Change the background styles here */
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+      /* Change the background styles here */
+    }
+  }
+  

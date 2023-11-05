@@ -13,11 +13,11 @@ const ProductCategory = () => {
   ];
  
   return (
-    <div className="flex justify-evenly flex-wrap text-[12px] md:text-[17px] leading-none rounded-full px-2 py-0 ">
+    <div className="flex justify-evenly flex-wrap text-[12px] md:text-[17px] leading-none rounded-full px-2 py-0  ">
       {categories.length &&
         categories.map((x, i) => (
           <Link to={`/category/${x.title}`} className="m-5 " key={i}>
-            <div className="m-[6px] w-[100px] h-[100px] md:w-[200px] md:h-[200px] mx-auto ">
+            <div className="m-[6px] w-[100px] h-[100px] md:w-[200px] md:h-[200px] mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] ">
               <img
                 className="w-[100px] h-[100px] md:w-[200px] md:h-[200px] "
                 src={x.img}

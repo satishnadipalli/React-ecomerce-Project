@@ -7,9 +7,9 @@ const LogMerging = ({setSignup}) => {
 const [login,setisLogin] = useState(true);
 
   return (
-    <div>
+    <div className='h-full w-full flex justify-center align-center'>
         {
-            login ? <SignUpPage setisLogin={setisLogin} setSignup={setSignup} /> 
+            login ? <SignUpPage setisLogin={setisLogin} setSignup={setSignup}/> 
             
             : 
             

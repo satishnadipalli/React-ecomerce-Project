@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
-const ProductsList = () => {
+import { Cart } from "./Cart";
+const ProductsList = ({cartCount,setCount}) => {
   const { id } = useParams();
   const [products, setProducts] = useState([]);
   const [isloading, setIsLoading] = useState("loader");
+  
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -13,7 +14,6 @@ const ProductsList = () => {
           
         );
         const jsonData = await res.json();
-        console.log("Res ", jsonData);
         setIsLoading("success");
   
         setProducts(jsonData);
@@ -31,6 +31,17 @@ const ProductsList = () => {
   }, [id]);
 
   console.log(products);
+  function addToCart(id) {
+    const productToAdd = products.find((element) => element.id === id);
+    console.log("Product to add:", productToAdd);
+    if(productToAdd){
+      Cart.push(productToAdd);
+      console.log(Cart)
+    }
+    setCount(previousCount=>previousCount+1);
+    
+  }
+  
   return (
     <div className="flex flex-col justify-center ">
       {isloading === "loader" ? (
@@ -41,7 +52,7 @@ const ProductsList = () => {
         <div className="">
           {products.length &&
             products.map((x, i) => (
-              <div key={i} className="flex flex-col md:flex-row  text-[12px] md:text-[17px]  gap-4 px-3 py-2">
+              <div key={x.id} className="flex flex-col md:flex-row  text-[12px] md:text-[17px]  gap-4 px-3 py-2">
                 <div className="basis-1/2 ">
                   <div className="m-[6px] w-[150px] h-[150px] md:w-[200px] md:h-[200px] mx-auto">
                     <img
@@ -70,8 +81,11 @@ const ProductsList = () => {
                   <p className="text-base md:text-lg font-semibold my-2">
                     &#8377; {x.price}
                   </p>
-                  <button className="text-base md:text-lg my-2 bg-green-600 hover:bg-green-700 text-white px-2 py-1 rounded-md">
+                  <button className="text-sm font-semibold bg-green-500 hover:bg-green-600 text-white px-2 py-1 rounded-md mr-8">
                     Buy Now
+                  </button>
+                  <button onClick={()=>addToCart(x.id)} className="text-sm font-semibold bg-yellow-500 hover:bg-yellow-600 text-white px-2 py-1 rounded-md ml-7">
+                    Add to Cart
                   </button>
                 </div>
               </div>
